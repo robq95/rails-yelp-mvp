@@ -64,5 +64,7 @@ end
 # To add Simple Form to your app
 gem "simple_form"
 
+gem "faker"
+
 gem 'rspec-rails', group: [ :test ]
 gem 'rails-controller-testing', group: [ :test ]
