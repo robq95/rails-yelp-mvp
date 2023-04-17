@@ -10,6 +10,16 @@
   </ul>
 </div>
 
+<h3>Reviews</h3>
+<div>
+    <% @restaurant.reviews.each do |review| %>
+      <div>
+        <p><%= review.content  %></p>
+        <p><%= "⭐️" * review.rating %></p>
+      </div>
+    <% end %>
+</div>
+
 <div>
   <%= link_to "Back to Restaurants", restaurants_path, class: "btn btn-primary" %>
 </div>
