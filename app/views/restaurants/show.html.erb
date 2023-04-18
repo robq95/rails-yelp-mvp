@@ -11,15 +11,20 @@
 </div>
 
 <h3>Reviews</h3>
+<br>
 <div>
     <% @restaurant.reviews.each do |review| %>
       <div>
         <p><%= review.content  %></p>
         <p><%= "⭐️" * review.rating %></p>
       </div>
+      <hr>
     <% end %>
 </div>
 
 <div>
+  <%= link_to "Create new Review", new_restaurant_review_path(@restaurant), class: "btn btn-primary" %>
+  <br>
+  <br>
   <%= link_to "Back to Restaurants", restaurants_path, class: "btn btn-primary" %>
 </div>
